@@ -51,7 +51,7 @@ class Grid :
         ended_grid.append(0)
         return np.array_equal(
             self.state,
-            np.asarray(ended_grid).reshape(grid.size,grid.size)
+            np.asarray(ended_grid).reshape(self.size,self.size)
             )
     
     def get_possible_actions(self)-> list[int]:
@@ -59,9 +59,11 @@ class Grid :
         actions=[i for i in range(0,4)]
         pos_empty=self.get_empty_position()
         if pos_empty[0]==0 : actions.remove(0)
-        elif pos_empty[0]==(self.size-1):actions.remove(2)
+        elif pos_empty[0]==(self.size-1):
+            actions.remove(2)
         if pos_empty[1]==0:actions.remove(1)
-        elif pos_empty[1]==(self.size-1):actions.remove(3)
+        elif pos_empty[1]==(self.size-1):
+            actions.remove(3)
         return  actions
     
     def get_empty_position(self)->tuple:
