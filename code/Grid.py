@@ -7,7 +7,8 @@
 import numpy as np
 import random
 from math import floor
-from utils.functions import *
+
+from code.utils.functions import build_line, is_solvable
 
 
 MIN_SIZE = 2
@@ -69,6 +70,11 @@ class Grid :
     def get_empty_position(self)->tuple:
         """Return the position od the tuple"""
         return floor(np.argmin(self.state)/self.size),np.argmin(self.state)%self.size
+
+    def get_good_place(self):
+      ended_grid=[i for i in range(1,self.size**2)]
+      ended_grid.append(0)
+      return (np.asarray(ended_grid).reshape(self.size,self.size) == self.state ).sum()
 
 
     def __str__(self) -> str:
