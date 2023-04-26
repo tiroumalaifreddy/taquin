@@ -31,7 +31,7 @@ class QLearningAgent(Agent):
             else:
                 return possible_actions[np.argmax(q_values)]
 
-    def update(self,state, action, reward, next_state):
+    def update(self,state, action, reward, next_state,next_action):
         old_Q = self.get_Q(state, action)
         next_max_Q = max([self.get_Q(next_state, a) for a in self.actions])
         new_Q = old_Q + self.alpha * (reward + self.gamma * next_max_Q - old_Q)
