@@ -14,4 +14,8 @@ class Agent(ABC) :
     def update(self,state,action,reward,next_state):
         pass
     
+    @abstractmethod
+    def update_episode(self,episode):
+        pass
+    
     

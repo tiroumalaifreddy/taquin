@@ -1,6 +1,6 @@
-from code import Agent
-from code.Agents.RandomAgent import RandomAgent
 from code.Grid import Grid
+from code.Agent import Agent
+
 
 
 class Game:
@@ -33,24 +33,31 @@ class Game:
       return reward,self.grid.state,action
 
 
-  def play_game(self,agent,stop=100000, print_game=False,train=True)->bool:
-      print("Let start a new game")
+  def play_game(self,agent:Agent,stop=100000, print_game=False,train=True)->bool:
+      print('ply')
+
+      episode=[]
+      solved=True
+      
       while not self.end:
           state=self.grid.state.copy()
           action = agent.choose_action(
              state,
              self.grid.get_possible_actions()
           )
+          
           reward,next_state,action=self.play_round(action)
-
+          episode.append((reward,state,action))
           if train:agent.update(state, action, reward, next_state)
           self.sum_reward+=reward
-          if self.round > stop:
-            return False
-            break
           self.round+=1
           if print_game :print(self)
-      return True
+          if self.round >= stop:
+            break
+      self.end=True
+      if train: agent.update_episode(episode=episode)
+        
+      return solved
 
   def __str__(self):
       game_to_show=f"---- {self.round} ----------\n"
