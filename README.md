@@ -43,9 +43,11 @@ Avec le Q-learner `QLearner_Alexandre/Adrien_qlearner_500_rounds_99.npy` on obti
 + 90 % des win en moins de 200 rounds
 + 70 % des win en moins de 100 rounds
 
-![](https://github.com/tiroumalaifreddy/taquin/blob/dev/taquin.gif)
+![](https://github.com/tiroumalaifreddy/taquin/blob/dev/gif/taquin.gif)
 
+![](https://github.com/tiroumalaifreddy/taquin/blob/dev/gif/taquin2.gif)
 
+![](https://github.com/tiroumalaifreddy/taquin/blob/dev/gif/taquin3.gif)
 
 
 
