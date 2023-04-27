@@ -35,4 +35,23 @@ Certains Q-Learners ont également d'autres méthodes :
 + Ligne du haut complétée : +1200
 + Colonne de gauche complétée : +1200
 
+### Résulats 
+
+Avec le Q-learner `QLearner_Alexandre/Adrien_qlearner_500_rounds_99.npy` on obtient :
++ 99 % des win en moins de 500 rounds
++ 95 % des win en moins de 300 rounds
++ 90 % des win en moins de 200 rounds
++ 70 % des win en moins de 100 rounds
+
+![](https://github.com/tiroumalaifreddy/taquin/blob/dev/taquin.gif)
+
+
+
+
+
+
+
+
+
+
 
