@@ -17,3 +17,22 @@ Le fichier `game.py` contient la logique du jeu, y compris la boucle de jeu prin
 
 ## La grille
 Le fichier `grid.py` contient la classe Grid, qui définit la grille de taquin, les actions possibles et les vérifications de fin de partie. La classe Grid a des fonctions pour effectuer des actions sur la grille (`take_action()`), vérifier si la grille est terminée (`is_finish()`), et obtenir les actions possibles à partir d'un état donné (`get_possible_actions()`). La grille est initialisée avec une taille donnée et des tuiles placées au hasard, mais vérifiées pour être résolvables.
+
+## Reinforcement learning
+
+### 
+
+### Rewards
+
+Pour nos agents, il y a plusieurs actions qui lui permettent de gagner ou perdre des récompenses :
+
++ Jouer un round : -1
++ Gagner la partie : +50000
++ 1 élément bien placé : +100
++ 1 élément qui était bien placé et qui a été déplacé : -10
+
+Certains Q-Learners ont également d'autres méthodes :
++ Ligne du haut complétée : +1200
++ Colonne de gauche complétée : +1200
+
+
