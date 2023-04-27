@@ -36,3 +36,9 @@ class QLearningAgent(Agent):
         next_max_Q = max([self.get_Q(next_state, a) for a in self.actions])
         new_Q = old_Q + self.alpha * (reward + self.gamma * next_max_Q - old_Q)
         self.Q[tuple(state.reshape(self.size))][action] = new_Q
+    
+    def update_episode(self, episode):
+        pass
+
+
+    

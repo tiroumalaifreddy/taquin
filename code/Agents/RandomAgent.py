@@ -14,3 +14,6 @@ class RandomAgent(Agent):
     def update(self,state, action, reward, next_state,next_action):
         #Do nothing
         pass
+    
+    def update_episode(self,episode):
+        pass
