@@ -14,6 +14,7 @@ class Game:
       self.actions=[]# list of all actions done in the game
       self.last_good=0
       self.number_good_place=0
+      self.all_grid=[]
 
   def play_round(self,action:int):
       """function_agent : fonction de choix de l'agent"""
@@ -51,7 +52,9 @@ class Game:
           if train:agent.update(state, action, reward, next_state)
           self.sum_reward+=reward
           self.round+=1
-          if print_game :print(self)
+          if print_game :
+             print(self)
+             self.all_grid.append(state)
           if self.round >= stop:
             break
       self.end=True
