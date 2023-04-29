@@ -22,7 +22,7 @@ Le fichier `grid.py` contient la classe Grid, qui définit la grille de taquin, 
 
 ### State space
 
-Notre state space est de dimension 9!/2 (car avec la fonction `is_solvable` on supprime la moitité des grilles) soit 181440. Si on veut une grille 4x4 alor le state space sera de 16!/2 soit 10461394944000
+Notre state space est de dimension 9!/2 (car avec la fonction `is_solvable` on supprime la moitité des grilles) soit 181440. Si on veut une grille 4x4 alors le state space sera de 16!/2 soit 10461394944000
 
 ### Rewards
 
