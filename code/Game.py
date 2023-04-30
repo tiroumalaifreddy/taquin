@@ -46,10 +46,16 @@ class Game:
              state,
              self.grid.get_possible_actions()
           )
-          
-          reward,next_state,action=self.play_round(action)
+          if agent.__class__.__name__ == 'SarsaAgent':
+            reward,next_state,next_action=self.play_round(action)
+          else:
+            reward,next_state,action=self.play_round(action)
           episode.append((reward,state,action))
-          if train:agent.update(state, action, reward, next_state)
+          if train:
+            if agent.__class__.__name__ == 'SarsaAgent': 
+              agent.update(state, action, reward, next_state, next_action)
+            else:
+               agent.update(state, action, reward, next_state)               
           self.sum_reward+=reward
           self.round+=1
           if print_game :

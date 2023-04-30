@@ -31,7 +31,7 @@ class MonteCarloAgent(Agent):
 
 
 
-    def update(self, state, action, reward, next_state,next_action):
+    def update(self, state, action, reward, next_state,next_action = None):
         pass
 
 

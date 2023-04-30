@@ -41,3 +41,6 @@ class SarsaAgent(Agent):
             self.Q[tuple(self.prev_state.reshape(self.size))][self.prev_action] = new_Q
         self.prev_state = state
         self.prev_action = action
+    
+    def update_episode(self, episode):
+        pass

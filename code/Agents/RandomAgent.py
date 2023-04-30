@@ -11,7 +11,7 @@ class RandomAgent(Agent):
         self.played_round+=1
         return random.choice(possible_actions)
 
-    def update(self,state, action, reward, next_state,next_action):
+    def update(self,state, action, reward, next_state,next_action=None):
         #Do nothing
         pass
     
