@@ -10,7 +10,7 @@ Le projet comprend trois fichiers principaux :
 + `grid.py` : Contient la classe Grid, qui définit la grille de taquin, les actions possibles et les vérifications de fin de partie.
 
 ## L'agent
-Le fichier agent.py définit une classe abstraite Agent, qui doit être héritée pour créer un agent de taquin utilisant RL. L'agent a deux fonctions principales : `choose_action()` et `update()`. `choose_action()` est appelé à chaque tour pour décider de l'action à effectuer. `update()` est appelé après chaque tour pour mettre à jour l'état de l'agent en fonction de l'état actuel de la grille et de la récompense associée à l'action précédente.Dans le fichier `code\Agents` on peut retrouver nos 3 agents disponible: Random, Qlearning et Sarsa
+Le fichier agent.py définit une classe abstraite Agent, qui doit être héritée pour créer un agent de taquin utilisant RL. L'agent a deux fonctions principales : `choose_action()` et `update()`. `choose_action()` est appelé à chaque tour pour décider de l'action à effectuer. `update()` est appelé après chaque tour pour mettre à jour l'état de l'agent en fonction de l'état actuel de la grille et de la récompense associée à l'action précédente.Dans le fichier `code\Agents` on peut retrouver nos 4 agents disponible: Random, Qlearning, Sarsa et Monte Carlo.
 
 ## Le jeu
 Le fichier `game.py` contient la logique du jeu, y compris la boucle de jeu principale, la gestion des rounds, etc. La méthode `play_game()` est la méthode principale pour jouer une partie de taquin. Elle prend un agent en entrée et joue des rounds jusqu'à ce que le jeu soit terminé. La méthode retourne `True` si le jeu est gagné, sinon `False`.
