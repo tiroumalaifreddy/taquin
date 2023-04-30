@@ -34,13 +34,11 @@ class SarsaAgent(Agent):
                 return possible_actions[np.argmax(q_values)]
 
     def update(self, state, action, reward, next_state, next_action):
-        if self.prev_state is not None:
-            old_Q = self.get_Q(self.prev_state, self.prev_action)
-            next_Q = self.get_Q(next_state, next_action)
-            new_Q = old_Q + self.alpha * (reward + self.gamma * next_Q - old_Q)
-            self.Q[tuple(self.prev_state.reshape(self.size))][self.prev_action] = new_Q
-        self.prev_state = state
-        self.prev_action = action
+        old_Q = self.get_Q(state, action)
+        next_Q = self.get_Q(next_state, next_action)
+        new_Q = old_Q + self.alpha * (reward + self.gamma * next_Q - old_Q)
+        self.Q[tuple(state.reshape(self.size))][action] = new_Q
+
     
     def update_episode(self, episode):
         pass
