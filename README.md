@@ -52,6 +52,9 @@ Avec le Q-learner `QLearner_models/qlearner_500_rounds_99.npy` on obtient :
 + 90 % de victoire en moins de 200 rounds
 + 70 % de victoire en moins de 100 rounds
 
+Pour SARSA : nous n'avons pas reussi à avoir de bon résultats lors de nos entrainements (moins de 5% de winrate pour 1000 rounds)
+
+Pour MonteCarlo : entrainement  très long car pour qu'ils soit enregistré les états doivent avoir été dans une partie gagnante
 
 ### Application
 
