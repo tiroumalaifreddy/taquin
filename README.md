@@ -38,6 +38,12 @@ Certains Q-Learners ont également d'autres méthodes :
 + Ligne du haut complétée : +1200
 + Colonne de gauche complétée : +1200
 
+### Agents
+
++ Qlearner : l'agent Qlearner à été entrainé dans le notebook `train_Qlearner.ipynb` comme on a essayé plusieur reward le code de l'implémentation est un peu différent et se trouve dans le notebook.
++ Sarsa : L'entrainement se trouve dans `train_sarsa.ipynb`
++ montecarlo : L'entrainement se trouve dans `train_montecarlo.ipynb`
+
 ### Résultats 
 
 Avec le Q-learner `QLearner_models/qlearner_500_rounds_99.npy` on obtient :

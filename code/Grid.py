@@ -55,7 +55,7 @@ class Grid :
             np.asarray(ended_grid).reshape(self.size,self.size)
             )
     
-    def get_possible_actions(self)-> list[int]:
+    def get_possible_actions(self):
         """return the possible actions"""
         actions=[i for i in range(0,4)]
         pos_empty=self.get_empty_position()
