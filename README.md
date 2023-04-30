@@ -22,7 +22,8 @@ Le fichier `grid.py` contient la classe Grid, qui définit la grille de taquin, 
 
 ### State space
 
-Notre state space est de dimension 9!/2 (car avec la fonction `is_solvable` on supprime la moitité des grilles) soit 181440. Si on veut une grille 4x4 alors le state space sera de 16!/2 soit 10461394944000
+Dans ce projet, nous nous concentrons sur la résolution d'une grille 3x3. La dimension des grilles possibles est alors 9!. Cependant, la moitié des grilles de Taquin ne sont pas solvables.
+Notre state space est donc de dimension 9!/2 (on supprime la moitié des grilles avec la fonction `is_solvable`) soit **181440**. Si on veut une grille 4x4 alors le state space sera de 16!/2 soit 10461394944000
 
 ### Rewards
 
@@ -30,20 +31,20 @@ Pour nos agents, il y a plusieurs actions qui lui permettent de gagner ou perdre
 
 + Jouer un round : -1
 + Gagner la partie : +50000
-+ 1 élément bien placé : +100
++ 1 nouvel élément bien placé : +100
 + 1 élément qui était bien placé et qui a été déplacé : -10
 
 Certains Q-Learners ont également d'autres méthodes :
 + Ligne du haut complétée : +1200
 + Colonne de gauche complétée : +1200
 
-### Résulats 
+### Résultats 
 
 Avec le Q-learner `QLearner_Alexandre/Adrien_qlearner_500_rounds_99.npy` on obtient :
-+ 99 % des win en moins de 500 rounds
-+ 95 % des win en moins de 300 rounds
-+ 90 % des win en moins de 200 rounds
-+ 70 % des win en moins de 100 rounds
++ 99 % de victoire en moins de 500 rounds
++ 95 % de victoire en moins de 300 rounds
++ 90 % de victoire en moins de 200 rounds
++ 70 % de victoire en moins de 100 rounds
 
 ![](https://github.com/tiroumalaifreddy/taquin/blob/dev/gif/taquin.gif)
 
