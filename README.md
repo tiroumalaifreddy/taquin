@@ -46,6 +46,11 @@ Avec le Q-learner `QLearner_models/qlearner_500_rounds_99.npy` on obtient :
 + 90 % de victoire en moins de 200 rounds
 + 70 % de victoire en moins de 100 rounds
 
+
+### Application
+
+Voici un exemple d'application du jeu de taquin où le but est de retrouver l'image originale.
+
 ![](https://github.com/tiroumalaifreddy/taquin/blob/dev/gif/taquin.gif)
 
 ![](https://github.com/tiroumalaifreddy/taquin/blob/dev/gif/taquin2.gif)
